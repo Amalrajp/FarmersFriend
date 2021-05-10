@@ -1,0 +1,29 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="logo">
+            <a [routerLink]="['/homepage/plant']">
+                <img src="../assets/ptrm/zf-wabco-white.svg">
+            </a>
+            <p class="app-name zfcui-prometo-light">
+                Product Test Remote Monitoring
+            </p>
+        </span>
+        <span>
+            <div [routerLink]="['/']" class="logout zfcui-prometo-medium">
+                <button mat-raised-button (click)="logout()" >Logout</button>
+            </div>
+        </span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="page-title">
+    <div class="menu zfcui-prometo-medium">
+        <a *ngFor="let item of menu_items" [routerLink]="item.route">
+            <p class="menu-item">{{item.label}}</p>
+        </a>
+        <!-- <p class="menu-item">Reports</p> -->
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

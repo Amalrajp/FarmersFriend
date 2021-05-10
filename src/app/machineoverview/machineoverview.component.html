@@ -1,0 +1,90 @@
+<div class="full-page">
+  <p class="page-title zfcui-prometo-medium ">Asset Overview</p>
+  <div class="mat-elevation-z8 zfcui-prometo-medium">
+    <div style="justify-content: space-evenly;">
+      <mat-form-field class="example-full-width">
+        <mat-label>Business unit</mat-label>
+        <input matInput [value]="bu" readonly>
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label> Utilization (%)</mat-label>
+        <mat-select>
+          <mat-option value=0 (click)="filter(0)">All</mat-option>
+          <mat-option value=1 (click)="filter(1)">Less than 60%</mat-option>
+          <mat-option value=2 (click)="filter(2)">60% to 85%</mat-option>
+          <mat-option value=3 (click)="filter(3)">above 85%</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>From</mat-label>
+        <input readonly="true" [(ngModel)]="date_1"  matInput [matDatepicker]="picker" [max]="max_date1" (dateChange)="onDateSelect()">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>To</mat-label>
+        <input readonly="true" [(ngModel)]="date_2" matInput [matDatepicker]="picker1" [max]="max_date2" [min]="date_1">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <button mat-raised-button class="primary-button" (click)="getStatusPercent()">VIEW</button>
+    </div>
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="mach_id">
+        <th mat-header-cell *matHeaderCellDef> MACHINE_ID </th>
+        <td mat-cell *matCellDef="let element"> PLC-{{element.plc_id%1000}} Machine {{element.machine_id}}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="live_status">
+        <th mat-header-cell *matHeaderCellDef> LIVE MACHINE STATUS</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="status-box" *ngIf="element.util!=null">
+            <img [src]="icon[element.sts?1:0]">
+            <span>{{(element.sts?'Run':'Idle')}}</span>
+          </div>
+          <span  *ngIf="element.util==null">-</span>
+        </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="today_util">
+        <th mat-header-cell *matHeaderCellDef> TODAY’S UTILIZATION (%)</th>
+        <td mat-cell *matCellDef="let element">
+          {{element.util==null?'-':(element.util| number:'0.0-1')}}
+        </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="run_idle">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="last-colm">
+            <div class="rect2"></div>
+            <span>RUN %</span>
+            <div class="rect"> </div>
+            <span>IDLE %</span>
+         
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="bar-container" *ngIf="element.run!=null">
+            <div class="run" [ngStyle]="{'width':element.run+'%'}"> {{element.run|number:'0.0-1'}}
+            </div>
+            <div class="idle" [ngStyle]="{'width':100-element.run+'%'}">
+              {{(100-element.run)|number:'0.0-1'}}</div>
+            <!-- <div class="alarm">19%</div> -->
+
+          </div>
+          <span  *ngIf="element.run==null">-</span>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

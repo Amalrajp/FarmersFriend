@@ -1,0 +1,35 @@
+@import 'fonts.css';
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "tahoma", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.zfcui-prometo-medium {
+  font-family: "Prometo", sans-serif;
+  font-weight: 500;
+}
+
+.zfcui-prometo-light {
+  font-family: "Prometo", sans-serif;
+  font-weight: 300;
+}
+
+.hover{
+  cursor: pointer;
+}
+.primary-button {
+  background: #004A9C 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 2px #0000003D;
+  border-radius: 2px;
+  font: Medium 14px/20px Roboto;
+  color: #FFF;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

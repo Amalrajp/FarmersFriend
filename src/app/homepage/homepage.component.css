@@ -1,0 +1,62 @@
+.example-container {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+
+.mat-raised-button {
+    background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font: Light 21px/21px ZF Prometo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.menu {
+    margin-left: 100px;
+    display: flex;
+}
+.menu-item{
+letter-spacing: 0px;
+color: #00ABE7;
+opacity: 1;
+margin: 10px 20px 10px 20px;
+}
+.page-title{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+height: 50px;
+}
+
+.mat-toolbar {
+    background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.app-name {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    margin: 4px 100px 0px 10px;
+}
+
+.logo {
+    display: flex;
+    margin-left: 100px;
+}
+
+.logout {
+    display: inline-block;
+    margin-right: 120px;
+}
+
+.mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+}
