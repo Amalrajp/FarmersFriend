@@ -1,62 +1,106 @@
-.example-container {
-    position: absolute;
-    top: 64px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-}
-
-.mat-raised-button {
-    background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
-    font: Light 21px/21px ZF Prometo;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-}
-
-.menu {
-    margin-left: 100px;
-    display: flex;
-}
-.menu-item{
-letter-spacing: 0px;
-color: #00ABE7;
-opacity: 1;
-margin: 10px 20px 10px 20px;
-}
-.page-title{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-opacity: 1;
-height: 50px;
+.container {
+    min-height: 100vh;
+    letter-spacing: 1px;
+    background-color: #6cb6e43d;
+    /* background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box; */
 }
 
 .mat-toolbar {
-    background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box;
+    /* background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box; */
     opacity: 1;
-}
-
-.app-name {
-    text-align: left;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    opacity: 1;
-    margin: 4px 100px 0px 10px;
-}
-
-.logo {
-    display: flex;
-    margin-left: 100px;
-}
-
-.logout {
-    display: inline-block;
-    margin-right: 120px;
 }
 
 .mat-toolbar-row {
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 3px 6px #00000029;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.alert {
+    background-color: #0a6aa5;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 15px 10px 10px 10px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.box {
+    background:#ffc000 0% 0% no-repeat padding-box;
+    color: #fff;
+    /* background:  */
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+    opacity: 1;
+    width: 180px;
+    height: 180px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 2.25rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+}
+
+.image {
+    height: 50px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 32px;
+    color: green
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+}
+
+.support, .complaints {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #0a6aa5;
+    color: #fff;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 960px) {
+    .box {
+        width: 120px;
+        height: 120px;
+        font-size: 1.75rem;
+    }
+    .box-container{
+        margin-top: 30px;
+    }
+  }

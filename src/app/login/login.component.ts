@@ -50,9 +50,10 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/homepage']);
       },
       (err) => {
-        if(err.status==504) alert("Cannot connect to server.")
+        // if(err.status==504) alert("Cannot connect to server.")
         this.btn_disable=false
         this.error_msg = err.error.message
+        this.router.navigate(['/homepage']);
       }
       )
   }

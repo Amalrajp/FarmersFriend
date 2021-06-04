@@ -1,44 +1,39 @@
-<!-- <mat-toolbar>
-    <mat-toolbar-row >
-        <span class="logo">
-        <img class="image" src="../assets/ptrm/zf-wabco-blue.svg">
-    </span>
-        <p class="app-name zfcui-prometo-medium">
-            Product Test Remote Monitoring
-        </p>
-
-    </mat-toolbar-row>
-</mat-toolbar>   -->
-
 <div
     style="background: transparent linear-gradient(180deg, #001024 0%, #004D7A 55%, #0070B4 90%, #0070B4 100%) 0% 0% no-repeat padding-box;;">
-    <div class="full-page" align="left">
+    <div class="full-page">
         <div class="example-card">
-            <mat-card-content>
-                <img class="image" src="../assets/ptrm/zf-wabco-blue.svg">
-                <div class="login zfcui-prometo-medium"> Product Test Remote Monitoring </div>
-                <div align="center" class="container-fluid login-div">
-                    <form class="example-form" (submit)="onLogin($event)">
-                        <mat-form-field class="example-full-width" appearance="outline">
-                            <mat-label>Username </mat-label>
-                            <input matInput placeholder="Username" [(ngModel)]="user_name" name="samuip"
-                                autocomplete="doNotAutoComplete">
-                        </mat-form-field>
+            <div class="center">
 
-                        <mat-form-field class="example-full-width" appearance="outline">
-                            <mat-label>Password </mat-label>
-                            <input autocomplete="new-password" matInput placeholder="Password" type="password"
-                                [(ngModel)]="password" name="password">
-                            <mat-hint style="color:red">{{error_msg}}</mat-hint>
-                        </mat-form-field>
-                        <div>
-                            <button mat-raised-button class="zfcui-prometo-medium" type="submit" [disabled]="btn_disable">Login</button>
-                            <p class="copy zfcui-prometo-medium">© ZF Friedrichshafen AG</p>
-                        </div>
-                    </form>
+                <img class="image" src="../assets/ptrm/fflogo.jpg">
+                <span class="name">Farmers Friend</span>
+            </div>
+            <div align="center" class="login zfcui-prometo-medium"> Sign in to App </div>
+            <div align="center" class="container-fluid login-div">
+                <form class="example-form" (submit)="onLogin($event)">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Username </mat-label>
+                        <input matInput placeholder="Username" [(ngModel)]="user_name" name="samuip"
+                            autocomplete="doNotAutoComplete">
+                    </mat-form-field>
 
-                </div>
-            </mat-card-content>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password </mat-label>
+                        <input autocomplete="new-password" matInput placeholder="Password" type="password"
+                            [(ngModel)]="password" name="password">
+                        <mat-hint style="color:red">{{error_msg}}</mat-hint>
+                    </mat-form-field>
+                    <div class="options">
+                        <a  href="./">Forgot password?</a>
+                    </div>
+                    <div class="center">
+                        <button mat-raised-button class="zfcui-prometo-medium" type="submit"
+                            [disabled]="btn_disable">Login</button>
+                    </div>
+                    <div class="options">
+                        <a  href="./">Sign Up?</a>
+                    </div>
+                </form>
+            </div>
         </div>
 
     </div>

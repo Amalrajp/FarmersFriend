@@ -1,29 +1,28 @@
-<mat-toolbar>
-    <mat-toolbar-row>
-        <span class="logo">
-            <a [routerLink]="['/homepage/plant']">
-                <img src="../assets/ptrm/zf-wabco-white.svg">
-            </a>
-            <p class="app-name zfcui-prometo-light">
-                Product Test Remote Monitoring
-            </p>
-        </span>
-        <span>
-            <div [routerLink]="['/']" class="logout zfcui-prometo-medium">
-                <button mat-raised-button (click)="logout()" >Logout</button>
-            </div>
-        </span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div class="container">
 
-<div class="page-title">
-    <div class="menu zfcui-prometo-medium">
-        <a *ngFor="let item of menu_items" [routerLink]="item.route">
-            <p class="menu-item">{{item.label}}</p>
-        </a>
-        <!-- <p class="menu-item">Reports</p> -->
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <span class="logo">
+                <img class="image" src="../assets/ptrm/fflogo.jpg">
+                <span class="name">Farmers Friend</span>
+            </span>
+            <span>
+                <div [routerLink]="['/']" class="logout zfcui-prometo-medium">
+                    <img class="image" src="../assets/ptrm/menu.svg">
+                </div>
+            </span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <p class="alert">ALERTS : 2</p>
+    <div class="box-container">
+        <div class="box">Information & Data</div>
+        <div class="box">Field Reports</div>
+        <div class="box">Schedule</div>
+        <div class="box">Upload Image</div>
     </div>
-</div>
-<div>
-    <router-outlet></router-outlet>
+    <div class="footer">
+        <div class="complaints">Complaints and queries</div>
+        <div class="support">Customer Care</div>
+    </div>
 </div>

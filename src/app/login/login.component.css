@@ -1,25 +1,3 @@
-.card {
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 10px;
-  opacity: 1;
-}
-
-.app-name {
-  text-align: left;
-  letter-spacing: 0px;
-  color: #0070B4;
-  text-transform: uppercase;
-  opacity: 1;
-  font-size: 25px;
-  margin: 5px 100px 0px 10px;
-}
-
-.logo {
-  display: flex;
-  margin: 10px 0px 0px 100px;
-  
-}
-
 .mat-toolbar-row {
   display: flex;
   justify-content: space-between;
@@ -30,24 +8,40 @@
 }
 
 .full-page {
-  padding-bottom: 50px;
-  padding-top: 55px;
-  background: url('/assets/ptrm/design.png');
-  margin-top: 10px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .example-card {
   max-width: 600px;
-  max-height: 1200px;
+  max-height: 600px;
+  padding: 40px 0;
   width: 400px;
-height: 550px;
   line-height: 20px;
   background-color: white;
-  margin-left: 20px;
   box-shadow: 0px 2px 3px #00000029;
-border-radius: 8px;
-opacity: 1;
-  
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 32px;
+  color: green
 }
 
 .example-form {
@@ -56,16 +50,15 @@ opacity: 1;
 }
 
 .example-full-width {
-  width: 100%;
+  width: 90%;
   margin-top: 1.5rem;
 }
 
 .login {
   letter-spacing: 0px;
   color: #707070;
-  text-transform: uppercase;
   opacity: 1;
-  font-size: 20px; 
+  font-size: 20px;
   margin: 20px;
 }
 
@@ -81,18 +74,17 @@ mat-label {
   color: #FFFFFF;
   font-size: 18px;
   width: 172px;
-height: 39px;
-margin-top: 20px;
+  height: 39px;
+  margin-top: 20px;
 }
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
 .image {
   height: 50px;
-  margin: 10px 10px 10px 120px;
-  
-}
-
-.copy{
-  margin: 100px 20px 10px 20px;
-  font-size: 18px;
-  color: #707070;
-
 }
